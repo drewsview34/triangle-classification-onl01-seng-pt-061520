@@ -23,7 +23,7 @@ class Triangle
     triangle = [(length_one + length_two > length_three), (length_one + length_three > length_two), (length_two + length_three > length_one)]
     sides = [length_one, length_two, length_three]
     sides.each do |side|
-      triangle = false if side <= 0 
+      triangle << false if side <= 0 
     raise TriangleError if triangle.include?(false)
     end
   end
